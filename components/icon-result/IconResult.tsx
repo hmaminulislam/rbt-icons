@@ -115,19 +115,19 @@ const IconResult = () => {
                 <DialogTrigger className="w-12 h-12 flex items-center justify-center bg-primary-50 rounded-sm text-lg cursor-pointer">
                   {item.icon}
                 </DialogTrigger>
-                <DialogContent className="border border-primary-50">
+                <DialogContent className="border border-primary-50 min-w-[700px] p-14">
                   <DialogHeader>
                     <DialogTitle className="mb-2">Usage</DialogTitle>
                   </DialogHeader>
-                  <pre className="bg-primary-50 p-4">
+                  <pre className="bg-primary-50/50 p-4">
                     <code>{item.import}</code>
                   </pre>
-                  <pre className="bg-primary-50 p-4">
+                  <pre className="bg-primary-50/50 p-4">
                     <code>{item.callIcon}</code>
                   </pre>
-                  <div className="flex gap-x-5">
+                  <div className="flex gap-x-12 mt-8">
                     <div className="flex-1">
-                      <div className="flex items-center justify-between gap-x-4 mb-2">
+                      <div className="flex items-center justify-between gap-x-4 mb-4">
                         <h6 className="text-lg font-semibold">Customizer</h6>
                         <button
                           onClick={resetSizeColor}
@@ -136,13 +136,13 @@ const IconResult = () => {
                           <RotateRight />
                         </button>
                       </div>
-                      <div className="flex items-center justify-between gap-x-4 mb-1.5">
+                      <div className="flex items-center justify-between gap-x-4 mb-3">
                         <span className="font-semibold">Size</span>
                         <span className="font-semibold">{value}</span>
                       </div>
                       <Slider />
-                      <div className="mt-2">
-                        <span className="font-semibold">Color</span>
+                      <div className="mt-3">
+                        <span className="font-semibold block mb-1">Color</span>
                         <div className="flex items-center gap-2">
                           <button
                             onClick={() => setOpen(true)}
@@ -162,7 +162,7 @@ const IconResult = () => {
                       )}
                     </div>
                     <div
-                      className={`w-60 h-60 flex items-center justify-center bg-primary-50 text-[${value}]`}
+                      className={`w-60 h-60 flex items-center justify-center bg-primary-50/40 text-[${value}]`}
                       style={{ fontSize: `${value}px`, color: color }}
                     >
                       {item.icon}
